@@ -2,7 +2,7 @@
 #
 # # if KERNELRELEASE is not defined, we've been called directly from the command line.
 # # Invoke the kernel build system. 
-obj-m += ofcd.o        # 产生ofcd 模块的目标文件
+obj-m += zjp_ofcd.o        # 产生ofcd 模块的目标文件
 CURRENT_PATH := $(shell pwd)   #模块所在的当前路径
 LINUX_KERNEL := $(shell uname -r)    #Linux内核源代码的当前版本
 LINUX_KERNEL_PATH := /lib/modules/$(shell uname -r)/build  #Linux内核源代码的绝对路径
