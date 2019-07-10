@@ -1,0 +1,7 @@
+1.my learn environment qemu+kernel;
+2.dynamic attach usb device;
+    * edit the attach-usb.xml
+    * In host virsh attach-device/detach-device <domain-id> attach-usb.xml
+    * But surprisingly the results wouldn’t be as expected,we need to unload usb_stroage and insmod zjp_usb;
+	print "Pen drive (0951:1642) plugged/[13593.162602] Pen drive removed"
+
