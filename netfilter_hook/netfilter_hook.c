@@ -57,12 +57,12 @@ static unsigned int nf_ipv4_test_hook(void *priv,
   eth_header = (struct ethhdr *)(skb_mac_header(skb));
   ip_header = (struct iphdr *)(skb_network_header(skb));
 
-  if(NULL != eth_header->h_dest[0]){
+  if('0' != eth_header->h_dest[0]){
      
   	hdr_dump(eth_header);
   }
 
-  if(NULL != ip_header->saddr){
+  if('0' != ip_header->saddr){
 
 	printk("src IP:'"NIPQUAD_FMT"', dst IP:'"NIPQUAD_FMT"' \n",
 	NIPQUAD(ip_header->saddr), NIPQUAD(ip_header->daddr));
